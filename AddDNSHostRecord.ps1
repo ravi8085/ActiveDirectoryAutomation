@@ -94,7 +94,7 @@ $OutFile= $PSScriptRoot +"\AddDNSHostRecordLog.log"
    if ($ValidateIP -eq "True"){
 
       if ($ValidateHostRecord -ne "True"){
-   Add-DnsServerResourceRecordA -Name $Hostnames[$i] -ZoneName "ams.corp.bluetriton.com" -AllowUpdateAny -IPv4Address $IPAddresses[$i]
+   Add-DnsServerResourceRecordA -Name $Hostnames[$i] -ZoneName "exampledmain.com" -AllowUpdateAny -IPv4Address $IPAddresses[$i]
    $StringVal =" Host Record is created for "+$HostNames[$i]+" which has "+$IPAddresses[$i]+" IP Address"
    #Write-host "Printing $HostNames[$i] Hostname"
      $LogfileOut +=$StringVal
